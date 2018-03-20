@@ -28,7 +28,7 @@ public class PlanSpec {
      */
     public static void main(final String[] args) throws Exception {
         //By default credentials are read from the '.credentials' file.
-        BambooServer bambooServer = new BambooServer("http://localhost:8085");
+        BambooServer bambooServer = new BambooServer("http://automation.landsend.com/bamboo");
 
         Plan plan = new PlanSpec().createPlan();
 
@@ -50,8 +50,8 @@ public class PlanSpec {
 
     Project project() {
         return new Project()
-                .name("Project Name")
-                .key("PRJ");
+                .name("Caffeine Build Project")
+                .key("CBP");
     }
 
     Plan createPlan() {
